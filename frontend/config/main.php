@@ -12,6 +12,7 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        'db' => require __DIR__ . '/db.php',
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],

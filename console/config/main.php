@@ -22,6 +22,7 @@ return [
           ],
     ],
     'components' => [
+        'db' => require dirname(__DIR__, 2) . '/frontend/config/db.php',
         'log' => [
             'targets' => [
                 [
