@@ -51,7 +51,7 @@ class FilesController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new FilesSearch(['scenario' => 'search']);
+        $searchModel = new FilesSearch();
 
         return $this->render('index', [
             'searchModel' => $searchModel,

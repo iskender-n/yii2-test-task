@@ -32,6 +32,7 @@ $this->title = 'Files list';
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             [
+                'attribute' => 'user_name',
                 'label' => 'Username',
                 'value' => function ($data) {
                     /** @var $data app\models\FileRecord */
@@ -39,9 +40,10 @@ $this->title = 'Files list';
                 },
             ],
             [
+                'attribute' => 'file_name',
                 'label' => 'File Name',
                 'value' => function ($data) {
-                    return Html::a($data['file_name'], "uploads/" . $data['file_name']); // $data['name'] for array data, e.g. using SqlDataProvider.
+                    return Html::a($data['file_name'], "uploads/" . $data['file_name'], ['download' => true]);
                 },
                 'format' => 'html',
             ],

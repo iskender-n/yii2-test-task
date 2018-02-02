@@ -28,16 +28,6 @@ class FilesSearch extends Model
     }
 
     /**
-     * @return array
-     */
-    public function scenarios()
-    {
-        return [
-            'search' => ['file_name', 'user_name'],
-        ];
-    }
-
-    /**
      * @param $params
      * @return ActiveDataProvider
      */
